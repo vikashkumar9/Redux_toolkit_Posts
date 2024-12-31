@@ -4,7 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 import Spinner from '../components/Spinner';
 
 const SingleList = () => {
-  const { id } = useParams(); // Get the post ID from the URL
+  const { id } = useParams();
   const { data: post, error, isLoading } = useGetPostByIdQuery(id);
   if (isLoading) {
     return (
